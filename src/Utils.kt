@@ -14,3 +14,7 @@ fun readInput(name: String) = File("src", "$name.txt")
 fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
     .toString(16)
     .padStart(32, '0')
+
+
+fun <T> List<T>.second() = this[1]
+fun <T, R> Pair<T, R>.reverse() = second to first
